@@ -1,0 +1,18 @@
+﻿using SyncPoint365.Core.Enums;
+
+namespace SyncPoint365.Core.Entities
+{
+    public class AbsenceRequest : BaseEntity
+    {
+        public DateTime DateFrom { get; set; }
+        public DateTime? DateTo { get; set; }
+        public DateTime? DateReturn { get; set; }
+        public string Type { get; set; } = default!;
+        public string? PreComment { get; set; }
+        public string? PostComment { get; set; }
+        public AbsenceRequestStatus Status { get; set; }
+
+        public int UserId { get; set; }
+        public User User { get; set; } = default!;
+    }
+}
